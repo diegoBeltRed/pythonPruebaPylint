@@ -1,0 +1,28 @@
+[
+    {
+        "type": "convention",
+        "module": "prueba",
+        "obj": "",
+        "line": 11,
+        "column": 31,
+        "endLine": null,
+        "endColumn": null,
+        "path": "prueba.py",
+        "symbol": "trailing-whitespace",
+        "message": "Trailing whitespace",
+        "message-id": "C0303"
+    },
+    {
+        "type": "convention",
+        "module": "prueba",
+        "obj": "",
+        "line": 1,
+        "column": 0,
+        "endLine": null,
+        "endColumn": null,
+        "path": "prueba.py",
+        "symbol": "missing-module-docstring",
+        "message": "Missing module docstring",
+        "message-id": "C0114"
+    }
+]
