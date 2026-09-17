@@ -20,4 +20,5 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint --exit-zero --output-format=github $(git ls-files '*.py') 
+        mkdir -p docs/pylint
+        pylint --exit-zero --output-format=html $(git ls-files '*.py') > docs/pylint/report.html
