@@ -21,4 +21,4 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         mkdir -p docs/pylint
-        pylint --exit-zero --output-format=html $(git ls-files '*.py') > docs/pylint/report.html
+        pylint --exit-zero --output-format=json:docs/pylint/report.json $(git ls-files '*.py')
