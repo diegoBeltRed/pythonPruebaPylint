@@ -20,4 +20,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint --exit-zero --output-format=json:pylint.json $(git ls-files '*.py') 
+        pylint --exit-zero --output-format=github $(git ls-files '*.py') 
