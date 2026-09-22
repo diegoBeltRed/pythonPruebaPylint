@@ -3,7 +3,7 @@
         "type": "convention",
         "module": "prueba",
         "obj": "",
-        "line": 11,
+        "line": 16,
         "column": 31,
         "endLine": null,
         "endColumn": null,
@@ -11,6 +11,19 @@
         "symbol": "trailing-whitespace",
         "message": "Trailing whitespace",
         "message-id": "C0303"
+    },
+    {
+        "type": "convention",
+        "module": "prueba",
+        "obj": "",
+        "line": 20,
+        "column": 0,
+        "endLine": null,
+        "endColumn": null,
+        "path": "prueba.py",
+        "symbol": "trailing-newlines",
+        "message": "Trailing newlines",
+        "message-id": "C0305"
     },
     {
         "type": "convention",
@@ -24,5 +37,57 @@
         "symbol": "missing-module-docstring",
         "message": "Missing module docstring",
         "message-id": "C0114"
+    },
+    {
+        "type": "convention",
+        "module": "prueba",
+        "obj": "func",
+        "line": 1,
+        "column": 0,
+        "endLine": 1,
+        "endColumn": 8,
+        "path": "prueba.py",
+        "symbol": "missing-function-docstring",
+        "message": "Missing function or method docstring",
+        "message-id": "C0116"
+    },
+    {
+        "type": "warning",
+        "module": "prueba",
+        "obj": "func",
+        "line": 3,
+        "column": 8,
+        "endLine": 3,
+        "endColumn": 9,
+        "path": "prueba.py",
+        "symbol": "redefined-outer-name",
+        "message": "Redefining name 'i' from outer scope (line 10)",
+        "message-id": "W0621"
+    },
+    {
+        "type": "warning",
+        "module": "prueba",
+        "obj": "func",
+        "line": 4,
+        "column": 8,
+        "endLine": 4,
+        "endColumn": 19,
+        "path": "prueba.py",
+        "symbol": "pointless-statement",
+        "message": "Statement seems to have no effect",
+        "message-id": "W0104"
+    },
+    {
+        "type": "error",
+        "module": "prueba",
+        "obj": "func",
+        "line": 4,
+        "column": 11,
+        "endLine": 4,
+        "endColumn": 19,
+        "path": "prueba.py",
+        "symbol": "invalid-unary-operand-type",
+        "message": "bad operand type for unary +: list",
+        "message-id": "E1130"
     }
 ]
