@@ -31,6 +31,7 @@ jobs:
         radon raw $(git ls-files '*.py') -j > docs/pylint/raw.json
         radon cc $(git ls-files '*.py') -j > docs/pylint/radon.json
         radon mi $(git ls-files '*.py') -j > docs/pylint/mi.json
+        radon ast $(git ls-files '*.py') -j > docs/pylint/ast.json
 
     - name: Commit report
       if: matrix.python-version == '3.10'
@@ -42,6 +43,7 @@ jobs:
         git add docs/pylint/radon.json
         git add docs/pylint/raw.json
         git add docs/pylint/mi.json
+        git add docs/pylint/ast.json
         git commit -m "Pylint Report" || true
         git push 
 
