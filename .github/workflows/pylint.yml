@@ -19,10 +19,18 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pylint
+        pip install radon
     - name: Analysing the code with pylint
       run: |
         mkdir -p docs/pylint
         pylint --exit-zero --output-format=json:docs/pylint/report.json $(git ls-files '*.py')
+
+    - name: Analysing the code witg radon
+      run: |
+        mkdir -p docs/pylint
+        radon raw $(git ls-files '*.py') -j > docs/pylint/raw.json
+        radon cc $(git ls-files '*.py') -j > docs/pylint/radon.json
+        radon mi $(git ls-files '*.py') -j > docs/pylint/mi.json
 
     - name: Commit report
       if: matrix.python-version == '3.10'
@@ -31,5 +39,11 @@ jobs:
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
         git add docs/pylint/report.json
+        git add docs/pylint/radon.json
+        git add docs/pylint/raw.json
+        git add docs/pylint/mi.json
         git commit -m "Pylint Report" || true
         git push 
+
+    
+    
