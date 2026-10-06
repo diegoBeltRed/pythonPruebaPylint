@@ -1,0 +1,23 @@
+.convention{
+    border: 1px solid #0aab85;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    background-color: #f5f5f5;
+}
+
+.error{
+    border: 1px solid #ff0000;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    background-color: #f5f5f5;
+}
+
+.warning{
+    border: 1px solid #ffee00;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    background-color: #f5f5f5;
+}
